@@ -89,20 +89,7 @@
                 card_type: "true",
                 page: 1
             })
-        })), $(".menu .menu__list").eq(0).append(t);
-        
-        t = $('<li class="menu__item selector" data-action="netflix"><div class="menu__ico">' + e + '</div><div class="menu__text">Netflix (фільми)</div></li>');
-        t.on("hover:enter", (function() {
-            Lampa.Activity.push({
-                url: "discover/movie?language=ru&with_networks=213",
-                title: "Netflix Movie",
-                component: "category_full",
-                source: "tmdb",
-                sort: "now",
-                card_type: "true",
-                page: 1
-            })
-        })), $(".menu .menu__list").eq(0).append(t);
+        })), $(".menu .menu__list").eq(0).append(t)
     }
 
     function c() {
