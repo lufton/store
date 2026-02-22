@@ -441,7 +441,14 @@
                     name: "Netflix"
                 },
                 onChange: function(e) {
-                    Lampa.Storage.set("porborki_netflix", e), 1 == e ? ((0 == $('[data-action="netflix"]').length && r()) || (0 == $('[data-action="netflix_movie"]').length && r_movie())) : ($('[data-action="netflix"]').remove() || $('[data-action="netflix_movie"]').remove())
+                    Lampa.Storage.set("porborki_netflix", e);
+                    if (1 == e) {
+                        0 == $('[data-action="netflix"]').length && r();
+                        0 == $('[data-action="netflix_movie"]').length && r_movie();
+                    } else {
+                        $('[data-action="netflix"]').remove();
+                        $('[data-action="netflix_movie"]').remove();
+                    }
                 }
             }), Lampa.SettingsApi.addParam({
                 component: "porborki",
