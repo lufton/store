@@ -96,7 +96,7 @@
         var t = $('<li class="menu__item selector" data-action="netflix_movie"><div class="menu__ico">' + e + '</div><div class="menu__text">Netflix (фільми)</div></li>');
         t.on("hover:enter", (function() {
             Lampa.Activity.push({
-                url: "discover/movie?language=ru&with_networks=213",
+                url: "list/7057042",
                 title: "Netflix (фільми)",
                 component: "category_full",
                 source: "tmdb",
